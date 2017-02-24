@@ -7,12 +7,15 @@ public class SlimeController : MonoBehaviour {
     public float moveSpeed;
     public float timeBetweenMove;
     public float timeToMove;
+    public float waitToReload;
 
     private Rigidbody2D myRigidbody;
     private bool moving;
     private Vector3 moveDirection;
     private float timeBetweenMoveCounter;
     private float timeToMoveCounter;
+    private bool reloading;
+    private GameObject thePlayer;
 
     // Use this for initialization
     void Start () {
@@ -55,5 +58,28 @@ public class SlimeController : MonoBehaviour {
                 moveDirection = new Vector3(Random.Range(-1f, 1f) * moveSpeed, Random.Range(-1f, 1f) * moveSpeed, 0f);
             }
         }
+
+        if (reloading)
+        {
+            waitToReload -= Time.deltaTime;
+            if(waitToReload < 0)
+            {
+                Application.LoadLevel(Application.loadedLevel);
+                thePlayer.SetActive(true);
+            }
+        }
 	}
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "Player")
+        {
+            //Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
+            reloading = true;
+            thePlayer = other.gameObject;
+
+        }
+    }
+
 }

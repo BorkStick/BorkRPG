@@ -16,11 +16,13 @@ public class PlayerController : MonoBehaviour {
     private bool attacking;
     private float attackTimeCounter;
     private float currentMoveSpeed;
+    private SFXManager sfxMan;
 
 	// Use this for initialization
 	void Start () {
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+        sfxMan = FindObjectOfType<SFXManager>();
 	}
 	
 	// Update is called once per frame
@@ -66,6 +68,7 @@ public class PlayerController : MonoBehaviour {
                 attacking = true;
                 myRigidbody.velocity = Vector2.zero;
                 anim.SetBool("Attack", true);
+                sfxMan.playerAttack.Play();
             }
 
             if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.5f && Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.5f)

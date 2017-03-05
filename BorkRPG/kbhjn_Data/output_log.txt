@@ -1,0 +1,40 @@
+Mono path[0] = 'W:/PROJECTS/GAME/UNITY/BorkRPG/BorkRPG/kbhjn_Data/Managed'
+Mono path[1] = 'W:/PROJECTS/GAME/UNITY/BorkRPG/BorkRPG/kbhjn_Data/Mono'
+Mono config path = 'W:/PROJECTS/GAME/UNITY/BorkRPG/BorkRPG/kbhjn_Data/Mono/etc'
+PlayerConnection initialized from W:/PROJECTS/GAME/UNITY/BorkRPG/BorkRPG/kbhjn_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55462
+Multi-casting "[IP] 10.0.0.100 [Port] 55462 [Flags] 2 [Guid] 3901245990 [EditorId] 669091700 [Version] 1048832 [Id] WindowsPlayer(4ciiBox) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55462]
+PlayerConnection already initialized - listening to [0.0.0.0:55462]
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Vendor:   NVIDIA
+    VRAM:     4058 MB
+    Driver:   20.19.15.4531
+Begin MonoManager ReloadAssembly
+Platform assembly: W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.024 seconds
+Platform assembly: W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: W:\PROJECTS\GAME\UNITY\BorkRPG\BorkRPG\kbhjn_Data\Managed\System.dll (this message is harmless)
+desktop: 2560x1440 59Hz; virtual: 7100x3430 at -2400,-1350
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.738451 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 3a1c -> priority: 1 
+  Thread -> id: 369c -> priority: 1 

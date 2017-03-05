@@ -7,13 +7,20 @@ public class PlayerHealthManager : MonoBehaviour {
 
     public int playerMaxHealth;
     public int playerCurrentHealth;
+    public float flashLength;
+    
 
     private SFXManager sfxMan;
+    private float flashCounter;
+    private bool flashActive;
+    private SpriteRenderer playerSprite;
 
     // Use this for initialization
     void Start () {
 
         playerCurrentHealth = playerMaxHealth;
+        playerSprite = GetComponent<SpriteRenderer>();
+
         sfxMan = FindObjectOfType<SFXManager>();
     }
 	
@@ -24,11 +31,37 @@ public class PlayerHealthManager : MonoBehaviour {
             sfxMan.playerDead.Play();
             gameObject.SetActive(false);
         }
+
+        if (flashActive)
+            {
+
+            if (flashCounter > flashLength * .66f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+            }
+            else if (flashCounter > flashLength * .33f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+            }
+            else if (flashCounter > 0f)
+            {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 0f);
+            } else {
+                playerSprite.color = new Color(playerSprite.color.r, playerSprite.color.g, playerSprite.color.b, 1f);
+                flashActive = false;
+            }
+
+            flashCounter -= Time.deltaTime;
+        }
+
 	}
 
     public void HurtPlayer(int damageToGive)
     {
         playerCurrentHealth -= damageToGive;
+
+        flashActive = true;
+        flashCounter = flashLength;
 
         sfxMan.playerHurt.Play();
     }

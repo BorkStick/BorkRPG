@@ -5,6 +5,7 @@ using UnityEngine;
 public class HurtPlayer : MonoBehaviour {
 
     public int damageToGive;
+    public GameObject damageNumber;
 
 
 
@@ -23,6 +24,11 @@ public class HurtPlayer : MonoBehaviour {
         if (other.gameObject.name == "Player")
         {
             other.gameObject.GetComponent<PlayerHealthManager>().HurtPlayer(damageToGive);
+
+
+            //damage text
+            var clone = (GameObject)Instantiate(damageNumber, other.transform.position, Quaternion.Euler(Vector3.zero));
+            clone.GetComponent<FloatingNumbers>().damageNumber = damageToGive;
         }
     }
 
